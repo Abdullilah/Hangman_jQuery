@@ -1,0 +1,154 @@
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.title{
+  color: rgb(166, 166, 166);
+  font-weight: bold;
+  font-family: cursive;
+}
+
+.start img{
+  width: 50%;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.start .start-btn{
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+.play{
+  display: none;
+}
+
+.play .game-over-img{
+  display: none;
+  width: 50%;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.play .congrate-img{
+  display: none;
+  width: 50%;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.play .box{
+  height: 460px;
+  width: 255px;
+  position: relative;
+  border: 2px solid #000;
+  margin: 10px auto;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.play .play-btn{
+  width: 150px;
+  margin: 5px auto;
+  display: block;
+}
+
+.play .box img{
+  position: absolute;
+  display: none;
+}
+
+.play .box img.bar{
+  left: 0;
+  top: 20px;
+  width: 140px;
+  display: block;
+}
+.play .box img.head{
+  left: 75px;
+  top: 40px;
+  z-index: 100;
+  width: 100px;
+}
+.play .box img.neck{
+  left: 110px;
+  width: 30px;
+  top: 135px;
+}
+.play .box img.corpus{
+  left: 81px;
+  top: 160px;
+  width: 90px;
+  z-index: 100;
+}
+
+.play .box img.right-arm{
+  width: 100px;
+  left: 140px;
+  top: 165px;
+  z-index: 50;
+}
+
+.play .box img.left-arm{
+  width: 100px;
+  left: 12px;
+  top: 165px;
+  z-index: 50;
+}
+
+.play .box img.right-hand{
+  width: 28px;
+  left: 216px;
+  top: 238px;
+}
+
+.play .box img.right-hand-rev{
+  width: 28px;
+  left: 8px;
+  top: 238px;
+}
+
+.play .box img.right-leg{
+  width: 65px;
+  left: 132px;
+  top: 285px;
+}
+
+.play .box img.right-leg-rev{
+  width: 65px;
+  left: 55px;
+  top: 285px;
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  -ms-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.play .box img.right-foot{
+  width: 65px;
+  left: 157px;
+  top: 410px;
+}
+
+.play .box img.right-foot-rev{
+  width: 65px;
+  left: 30px;
+  top: 410px;
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  -ms-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.play .player-area span{
+  margin-right: 10px;
+  font-size: 30px;
+  font-family: 'Permanent Marker', 'cursive';
+}

@@ -1,0 +1,44 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Hangman game
+    %link{:href => "style.css", :rel => "stylesheet"}/
+    / Latest compiled and minified CSS
+    %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :integrity => "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", :rel => "stylesheet"}/
+    / Optional theme
+    %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css", :integrity => "sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp", :rel => "stylesheet"}/
+  %body
+    .container
+      .row
+        .col-xs-12
+          %h1.text-center.title Hangman game
+          .start
+            %img{:alt => "Start Image", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/sources/hangman.png"}/
+            %button.start-btn.btn.btn-primary Start Game
+          .play
+            .box
+              %img.bar.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/bar.png"}/
+              %img.head.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/head.png"}/
+              %img.neck.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/neck.png"}/
+              %img.corpus.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/corpus.png"}/
+              %img.right-arm.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/right-arm.png"}/
+              %img.left-arm.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/left-arm.png"}/
+              %img.right-hand.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/right-hand.png"}/
+              / Use the same hand's image for left and right parts
+              %img.right-hand-rev.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/right-hand.png"}/
+              %img.right-leg.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/right-leg.png"}/
+              / Use the same leg's image for left and right parts
+              %img.right-leg-rev.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/right-leg.png"}/
+              %img.right-foot.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/right-foot.png"}/
+              / Use the same foot's image for left and right parts
+              %img.right-foot-rev.body-part{:alt => "part1", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/imgs/right-foot.png"}/
+            %img.game-over-img{:alt => "Game Over", :src => "https://raw.githubusercontent.com/netguru/frontend-recruitment-task/master/sources/hangman-game-over.png"}/
+            %img.congrate-img{:alt => "Game Over", :src => "http://i45.tinypic.com/adont0.gif["}/
+            .player-area
+              .missed-word
+              %input.input-letter{:maxlength => "1", :type => "text"}/
+              %button#check-btn Check
+              %button.play-btn.btn.btn-primary Try Again
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"}
+    %script{:src => "script.js"}

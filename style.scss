@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+
+$rotation-angle: 180deg;
+$shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.2), 0 15px 30px 0 rgba(0, 0, 0, 0.19);
+
+@mixin rev-image($ang) {
+  -webkit-transform: rotateY($ang);
+     -moz-transform: rotateY($ang);
+       -o-transform: rotateY($ang);
+      -ms-transform: rotateY($ang);
+          transform: rotateY($ang);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  color: rgb(166, 166, 166);
+  font-weight: bold;
+  font-family: cursive;
+}
+
+.start {
+  img {
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+    box-shadow: $shadow;
+  }
+  .start-btn {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.play {
+  display: none;
+  .game-over-img, .congrate-img {
+    display: none;
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: $shadow;
+  }
+  .box {
+    height: 460px;
+    width: 255px;
+    position: relative;
+    border: 2px solid #000;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: $shadow;
+  }
+  .play-btn {
+    width: 150px;
+    margin: 5px auto;
+    display: block;
+  }
+  .box img {
+    position: absolute;
+    display: none;
+    &.bar {
+      left: 0;
+      top: 20px;
+      width: 140px;
+      display: block;
+    }
+    &.head {
+      left: 75px;
+      top: 40px;
+      z-index: 100;
+      width: 100px;
+    }
+    &.neck {
+      left: 110px;
+      width: 30px;
+      top: 135px;
+    }
+    &.corpus {
+      left: 81px;
+      top: 160px;
+      width: 90px;
+      z-index: 100;
+    }
+    &.right-arm {
+      width: 100px;
+      left: 140px;
+      top: 165px;
+      z-index: 50;
+    }
+    &.left-arm {
+      width: 100px;
+      left: 12px;
+      top: 165px;
+      z-index: 50;
+    }
+    &.right-hand {
+      width: 28px;
+      left: 216px;
+      top: 238px;
+    }
+    &.right-hand-rev {
+      width: 28px;
+      left: 8px;
+      top: 238px;
+    }
+    &.right-leg {
+      width: 65px;
+      left: 132px;
+      top: 285px;
+    }
+    &.right-leg-rev {
+      width: 65px;
+      left: 55px;
+      top: 285px;
+      @include rev-image($rotation-angle);
+    }
+    &.right-foot {
+      width: 65px;
+      left: 157px;
+      top: 410px;
+    }
+    &.right-foot-rev {
+      width: 65px;
+      left: 30px;
+      top: 410px;
+      @include rev-image($rotation-angle);
+    }
+  }
+  .player-area span {
+    margin-right: 10px;
+    font-size: 30px;
+    font-family: 'Permanent Marker', 'cursive';
+  }
+}
